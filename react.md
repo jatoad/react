@@ -29,4 +29,14 @@
     - **const [count, setCount] = userState(0);**
     - we can then **call** this hook when an **action** occurs such as a **button click** 
 - accomplishes the same thing as a stateful component with a lot **less code**
-
+#### writing components 
+- in **src** folder create a **components** folder with a **FunctionalGreeting.js** file inside 
+    - calling the file and component **FunctionalGreeting** is not imperrative but is **industry standard**
+- in FunctionalGreeting, **import react** 
+- wrap all components **inside FunctionalGreeting** component
+- **export** FunctionalGreeting component and **import in App.js**
+    - **export default FunctionalGreeting;**
+- write **simple** functions as arrow **functions** 
+- only one component can be returned at the same time. this means that if **two or more components** are to be returned in the same function, they must be nested within the **same div**
+- **props**
+    - **perameters** put into component in order to tell it **what and how to render**
