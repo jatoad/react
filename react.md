@@ -40,3 +40,11 @@
 - only one component can be returned at the same time. this means that if **two or more components** are to be returned in the same function, they must be nested within the **same div**
 - **props**
     - **perameters** put into component in order to tell it **what and how to render**
+    - props are written in **jsx** like: **name="Mike"** in a similar way to class or id methods in html
+    - they should look like: **Hello, {props.name}!** when rendered
+
+## css in react
+- Within the component file, import the appropriate css file, e.g. import css from "./css/Sidebar.module.css"
+- Add the className to the outermost div in the component file e.g. < div className = {css.sidebar} >
+- Note: After adding classname and link to css module, your output in the preview should change to look like the example given above.
+- The convention for naming CSS files linked to specific React components is: 'component.module.css'
