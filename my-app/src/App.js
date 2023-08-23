@@ -1,12 +1,11 @@
 import './App.css';
-import FunctionalGreeting from './components/FunctionalGreeting';
+// import FunctionalGreeting from './components/FunctionalGreeting';
 import FunctionalGreetingWithProps from './components/FunctionalGreetingWithProps';
 
 function App() {
   return (
     <div>
-    <FunctionalGreeting />
-    <FunctionalGreetingWithProps />
+    <FunctionalGreetingWithProps greeeting="Hello, nice to meet you" name="Mike" age="32" />
   </div>
   )
 }
