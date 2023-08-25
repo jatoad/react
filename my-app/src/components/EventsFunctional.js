@@ -1,13 +1,18 @@
 import React from 'react'
 
 function EventsFunctional() {
-  return (
+
+    function clickHandler() {
+        console.log("shat me pants")
+    }
+  
+    return ( 
     <div>
-        <button>
-            click me - functional component
+        <button onClick={clickHandler}>
+            shit
         </button>
     </div>
-  )
+    )
 }
 
 export default EventsFunctional

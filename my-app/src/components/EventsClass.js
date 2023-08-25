@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 
 export class EventsClass extends Component {
-  render() {
+
+    clickHandler(){
+        console.log("pissed me pants")
+    }
+
+    render(){
     return (
-        <div>
-        <button>
-            click me - class component
+    <div>
+        <button onClick={this.clickHandler}>
+            piss
         </button>
     </div>
     )
