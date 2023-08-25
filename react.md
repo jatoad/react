@@ -59,8 +59,19 @@
     - **this.setState({ name: "value", });**
     - to log to the console the updated values, console .logs must be written as:
         - **this.setState({}, ()=>{ console.log(); });**
-    - to take multiple perameters inthe setState fuction, it will be written as, 
+    - to update the state based on a previous state, use a callback function:
         - **this.setState((prevState, prevProps) => {})**
+
+## ES7 snippets
+- **rfce** creates **functional component**
+- **rafce** creates **functional component** as an **arrow function**
+- **rce** creates **class component**
+- **rconst** creates **constructor**
+- **clg** creates **console.log()**
+- **clo** creates **console.log()** with object **name**
+
+## handling events
+- 
 
 
 ## css in react
