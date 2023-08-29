@@ -24,15 +24,23 @@
 - has the **ability to change** at any time once rendered
 - this is done via **updating the state**, a javascript **object** that contains various properties
 
-# react hook
-- built-in react components that can be added to stateless functional components in order for them to behave like stateful class components
-- a hook enables us to create a **state component with a method to update it**. for example:
-    - **const [count, setCount] = userState(0);**
-    - we can then **call** this hook when an **action** occurs such as a **button click** 
-- accomplishes the same thing as a stateful component with a lot **less code**
+# ES7 snippets
+- **rfce** creates **functional component**
+- **rafce** creates **functional component** as an **arrow function**
+- **rce** creates **class component**
+- **rconst** creates **constructor**
+- **clg** creates **console.log()**
+- **clo** creates **console.log()** with object **name**
+
+
+# css in react
+- Within the component file, import the appropriate css file, e.g. **import css from "./css/Sidebar.module.css"**
+- Add the className to the outermost div in the component file e.g. **< div className = {css.sidebar} >**
+- The convention for naming CSS files linked to specific React components is: **'component.module.css'**
 
 # writing components 
-### functional components
+
+## functional components
 - in **src** folder create a **components** folder with a **ComponentName.js** file inside 
     - calling the file and component **ComponentName** is not imperrative but is **industry standard**
 - in ComponentName, **import react** 
@@ -45,7 +53,13 @@
     - **perameters** put into component in order to tell it **what and how to render**
     - props are written in **jsx** like: **name="Mike"** in a similar way to class or id methods in html
     - they should look like: **Hello, {props.name}!** when rendered
-### class components
+### react hook
+- built-in react components that can be added to stateless functional components in order for them to behave like stateful class components
+- a hook enables us to create a **state component with a method to update it**. for example:
+    - **const [count, setCount] = userState(0);**
+    - we can then **call** this hook when an **action** occurs such as a **button click** 
+- accomplishes the same thing as a stateful component with a lot **less code**
+## class components
 - set up in much the same way as the functional component with imports and exports 
 - should be written as **class ComponentName extends React.Component {}**
 - as class components are **unable to return a value**, a **render method** must be setup 
@@ -62,16 +76,7 @@
         - **this.setState({}, ()=>{ console.log(); });**
     - to update the state based on a previous state, use a callback function:
         - **this.setState((prevState, prevProps) => {})**
-
-# ES7 snippets
-- **rfce** creates **functional component**
-- **rafce** creates **functional component** as an **arrow function**
-- **rce** creates **class component**
-- **rconst** creates **constructor**
-- **clg** creates **console.log()**
-- **clo** creates **console.log()** with object **name**
-
-# handling events
+## handling events
 - event handlers are written in **camel case** in react **eg. onclick**
 ### class
 ### event handlers need to be bound to the class
@@ -89,14 +94,13 @@
     - in regular use case this is the easiest method to use
 ### functional
 - **onClick={eventHandler}**
-
-# conditional rendering 
+## conditional rendering 
 - uses **terniary conditionals** which are essentially **shorthand if statements** 
-    - e.g functional **{props.connected ? 'Connected' : 'Not Connected'}** 
-    - e.g class (after setting the state in constructor) **{this.state.islaoded ? 'data loaded' : 'loading...'}**
-
-
-# css in react
-- Within the component file, import the appropriate css file, e.g. **import css from "./css/Sidebar.module.css"**
-- Add the className to the outermost div in the component file e.g. **< div className = {css.sidebar} >**
-- The convention for naming CSS files linked to specific React components is: **'component.module.css'**
+    - e.g functional: **{props.connected ? 'Connected' : 'Not Connected'}** 
+    - e.g class: (after setting the state in constructor) **{this.state.isLaoded ? 'data loaded' : 'loading...'}**
+- html/jsx elements can be rendered using this method 
+    - eg. **{this.state.isLoaded ? (html/jsx element) : (html/jsx element)}**
+## nesting components
+- **import** the **child component** at the top of the parent component file
+- the **child component** is **returned as a tag** in the **same form as in the App.js file**
+- to set the **props**, add in the form: **isLoggedIn={this.state.isLoggedIn}** to the tag

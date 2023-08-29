@@ -4,14 +4,15 @@ import './App.css';
 // import StatefulGreeting from './components/StatefulGreeting';
 // import EventsClass from './components/EventsClass';
 // import EventsFunctional from './components/EventsFunctional';
-import ConditionalRenderingClass from './components/ConditionalRenderingClass';
-import ConditionalRenderingFunctional from './components/ConditionalRenderingFunctional';
+// import ConditionalRenderingClass from './components/ConditionalRenderingClass';
+// import ConditionalRenderingFunctional from './components/ConditionalRenderingFunctional';
+import NestingComponents from '../../components/NestedComponents/NestingComponents';
+
 
 function App() {
   return (
     <div className='App'>
-      <ConditionalRenderingFunctional connetcd={true}/>
-      <ConditionalRenderingClass />
+      <NestingComponents />
     </div>
   )
 }
