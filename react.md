@@ -103,4 +103,13 @@
 ## nesting components
 - **import** the **child component** at the top of the parent component file
 - the **child component** is **returned as a tag** in the **same form as in the App.js file**
-- to set the **props**, add in the form: **isLoggedIn={this.state.isLoggedIn}** to the tag
+### passing the props down
+- to pass the **props**, add in the form: **isLoggedIn={this.state.isLoggedIn}** to the tag
+### updating the parent from a child
+- in general, information should only be passed down. i.e. from parent to child
+- there are some exceptions
+    - eg. a child forcing the parent to pass props down th another child
+- **contacting the parent component**
+    1. create a new method
+    2. pass down as a prop
+    3. call method from child component
