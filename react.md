@@ -113,3 +113,13 @@
     1. create a new method
     2. pass down as a prop
     3. call method from child component
+## rendering lists
+1. use **map()** function in the form:
+    - list.map(book => { return(list) })
+2. list items must have a key
+    - eg. key={list.title}
+## component life cycles
+- componentDidMount()
+    - executes after component is laced in the DOM
+- componentDidUpdate()
+- componentDidUnmount()
