@@ -119,6 +119,7 @@
 2. list items must have a key
     - eg. key={list.title}
 ## component life cycles
+- only class components have lifecycles
 - componentDidMount()
     - executes after component is loaded in the DOM
     - used commonly for data fetching from an outside source such as a database or an API
@@ -128,5 +129,18 @@
 - componentDidUpdate()
     - executes after component is updated (new props or state)
     - when updating a component each time, the constructor is **not** called each time
+    - when updating a parent component, both the child and parent id called. because the parent had to re-render the child,
+    it is concidered to be updated.
 - componentDidUnmount()
     - executes after component is removed from the the DOM
+    - useful for:
+        1. removing event listeners
+        2. resteeing intervals
+        3. stopping timers
+        4. cancelling network requests
+## forms in react
+-  **controlled components**
+    - input's values maintained and managed by react state
+- **uncontrolled components**
+    - input's values maintained and managed by the DOM
+         

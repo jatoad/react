@@ -11,13 +11,14 @@ import './App.css';
 // import RenderingLists from './components/rendering-lists /RenderingLists';
 // import Clocks from './components/Clocks'
 // import LifeCyclesCDM from './components/LifeCyclesCDM';
-import LifecyclesCDU from './components/LifecyclesCDU';
+// import LifecyclesCDU from './components/LifecyclesCDU';
+// import LifeCyclesCWU from './components/LifeCyclesCWU';
 
 
 function App() {
   return (
     <div className='App'>
-      <LifecyclesCDU />
+      < />
     </div>
   )
 }
