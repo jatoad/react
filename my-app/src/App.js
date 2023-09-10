@@ -10,13 +10,14 @@ import './App.css';
 // import MethodAsPropsParent from './components/MethodAsPropsParent';
 // import RenderingLists from './components/rendering-lists /RenderingLists';
 // import Clocks from './components/Clocks'
-import LifeCyclesCDM from './components/LifeCyclesCDM';
+// import LifeCyclesCDM from './components/LifeCyclesCDM';
+import LifecyclesCDU from './components/LifecyclesCDU';
 
 
 function App() {
   return (
     <div className='App'>
-      <LifeCyclesCDM />
+      <LifecyclesCDU />
     </div>
   )
 }

@@ -122,8 +122,11 @@
 - componentDidMount()
     - executes after component is loaded in the DOM
     - used commonly for data fetching from an outside source such as a database or an API
+    - when parent components are rendered, all the child elements are rendered by default
+        - this can be prevented in order to stop more complex application becoming slow
     - when using child components, the parent method will omly be called when all the children are mounted
 - componentDidUpdate()
     - executes after component is updated (new props or state)
+    - when updating a component each time, the constructor is **not** called each time
 - componentDidUnmount()
     - executes after component is removed from the the DOM
