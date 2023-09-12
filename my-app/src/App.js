@@ -13,12 +13,16 @@ import './App.css';
 // import LifeCyclesCDM from './components/LifeCyclesCDM';
 // import LifecyclesCDU from './components/LifecyclesCDU';
 // import LifeCyclesCWU from './components/LifeCyclesCWU';
+// import ControlledForm from './components/ControlledForm';
+// import UncontrolledForm from './components/UncontrolledForm';
+// import SearchBar from '../../components/forms/SearchBar';
+import HookCounter from './components/HookCounter';
 
 
 function App() {
   return (
     <div className='App'>
-      < />
+      <HookCounter />
     </div>
   )
 }

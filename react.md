@@ -131,7 +131,7 @@
     - when updating a component each time, the constructor is **not** called each time
     - when updating a parent component, both the child and parent id called. because the parent had to re-render the child,
     it is concidered to be updated.
-- componentDidUnmount()
+- componentWillUnmount()
     - executes after component is removed from the the DOM
     - useful for:
         1. removing event listeners
@@ -139,8 +139,18 @@
         3. stopping timers
         4. cancelling network requests
 ## forms in react
+- when submitting forms, this refreshes the page by default. this is undesireable as we want the component to work independantly form the page. this can be overwritten by using controlled forms
+        
 -  **controlled components**
     - input's values maintained and managed by react state
+    - taking control away from the DOM by using react state in the input tag and adding an onChange event handler
+        - eg. value={this.state.name}
+        - onChange={this.eventHandler}
+    - submit buttons by default cause the form to refresh the page. as this is not what we want, an onSubmit event handler can be used and the default settings ca be removed from the form in the event handler function 
+        - eg. event.removeDefault();
+
 - **uncontrolled components**
     - input's values maintained and managed by the DOM
-         
+    - to access the values of the formfield, we use Refs in the constructor and add the ref to the input
+        - eg. this.inputName = React.createRef (); (in the constructor)
+        - ref={this.inputName} 
