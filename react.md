@@ -142,6 +142,8 @@
 - when submitting forms, this refreshes the page by default. this is undesireable as we want the component to work independantly form the page. this can be overwritten by using controlled forms
         
 -  **controlled components**
+    - more featureful so is recommended to be used over the uncontrolled forms but much more difficult to implement 
+        - eg. real-time control, full control over onChange event   
     - input's values maintained and managed by react state
     - taking control away from the DOM by using react state in the input tag and adding an onChange event handler
         - eg. value={this.state.name}
@@ -151,6 +153,25 @@
 
 - **uncontrolled components**
     - input's values maintained and managed by the DOM
+    - less featureful but cane be easier to implement
     - to access the values of the formfield, we use Refs in the constructor and add the ref to the input
         - eg. this.inputName = React.createRef (); (in the constructor)
         - ref={this.inputName} 
+
+## hooks
+- allows state to be used without using class components
+- useState adds state to the functional components
+- useEffect replaces lifecycle methods
+### using hooks with arrays and objects with useState()
+- an array passed to the setter overwrites he old one
+- do **not** update state directly or use functions such as push or pop
+- use the spread operator to copy an array when adding an item and the filter method to remove one 
+- an object passed to the setter function overwrites the old one, so spread (...name) old values before adding new ones 
+- pass a function with the previous state to the setter function if new state depends on the previous state
+### the useEffect hook 
+- replaces the lifecycle methods
+- can be called everytime the function is rendered
+- can be called at specific time 
+    - eg. when a count changes **useEffect(() => {function}, [count])**
+    - the count in the square brackets [] tells the function when it is to be called
+- this can also be used to mimic the ComponentWillUnmount() bu using clearInterval(interval) in a return statement
